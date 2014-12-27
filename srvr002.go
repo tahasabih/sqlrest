@@ -23,7 +23,7 @@ func main() {
 	defer stmtIns.Close() // Close the statement when we leave main() / the program terminates
 
 	// Prepare statement for reading data
-	stmtOut, err := db.Prepare("SELECT * FROM users")
+	stmtOut, err := db.Query("SELECT * FROM users")
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
