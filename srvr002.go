@@ -18,7 +18,7 @@ func main() {
 	stmtIns, err := db.Query("INSERT INTO users (username, password_hash, accountType) VALUES('Tahasa', 'abcd123', 'admin')") // ? = placeholder
 	if err != nil {
 		panic(err.Error())
-		fmt.Printf("could not insert") // proper error handling instead of panic in your app
+		fmt.Printf("could not insert now") // proper error handling instead of panic in your app
 	}
 	defer stmtIns.Close() // Close the statement when we leave main() / the program terminates
 
